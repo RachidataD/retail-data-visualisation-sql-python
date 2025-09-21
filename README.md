@@ -1,18 +1,19 @@
-Portfolio Optimisation & CAPM (Public Data Demo)
+# Retail Data & Visualisation (SQLite + Python)
 
-> Original coursework used Bloomberg (not shareable). This repo reproduces the methodology with public data (Yahoo Finance + UK 3M T-bill).
+Recreates my coursework: build a retail SQLite database from CSVs, run analytical SQL queries, and plot insights (purchases per customer, monthly revenue, top products, by-country revenue).
 
-Contents
-- Company analysis → returns, descriptive stats, 2-asset portfolio, min-variance weights
-- WACC, cash flows, NPV & IRR demonstration
-- CAPM regression of excess returns (HSBC vs FTSE proxy), beta/alpha, R²
+## What this shows
+- ETL: create DB, schema, load CSVs from a zip, clean with pandas
+- Analytics: SQL queries for KPIs (customers, monthly trends, top products, by country)
+- Visuals: bar/line/pie charts with clear labels and titles
 
- How to run
+## How to run
 1. `pip install -r requirements.txt`
-2. Run notebooks in order inside `notebooks/`
-3. See `images/` for the efficient frontier and CAPM scatter
+2. Open `notebooks/main.ipynb` and run all cells to: build DB → run queries → plot charts.
 
-#Notes
-- No Bloomberg data in this repo; all figures regenerated from public sources.
+## Repo map
+- `src/retaildb.py` — DB + schema + load  
+- `src/queries.py` — analytics SQL  
+- `src/visuals.py` — plots  
+- `notebooks/main.ipynb` — end-to-end demo
 
-![Preview](preview.png)
